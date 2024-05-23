@@ -1,17 +1,31 @@
-## Running React on Replit
+## Special Thanks to ZTM for the inspiration of the project
+Course I used: https://zerotomastery.io/courses/javascript-project-algorithm-visualizer/
+# Graph Traversal Algorithms: BFS and DFS
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+## Overview
+This document provides an overview of two fundamental graph traversal algorithms: Breadth-First Search (BFS) and Depth-First Search (DFS). It includes characteristics, use cases, and pseudocode for each algorithm.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+## Breadth-First Search (BFS)
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+### Characteristics
+- Explores the graph level by level.
+- Uses a queue (FIFO) data structure.
+- Suitable for finding the shortest path in an unweighted graph.
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
-
-### Typescript
-
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+### Pseudocode
+```pseudo
+BFS(graph, start):
+    let queue = empty queue
+    let visited = empty set
+    
+    queue.enqueue(start)
+    visited.add(start)
+    
+    while queue is not empty:
+        node = queue.dequeue()
+        process(node)  // Placeholder for any action to perform on the node
+        
+        for each neighbor in graph.adjacentNodes(node):
+            if neighbor is not in visited:
+                queue.enqueue(neighbor)
+                visited.add(neighbor)

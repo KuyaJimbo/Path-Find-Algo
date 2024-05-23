@@ -1,0 +1,89 @@
+main {
+}
+
+.maze-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  margin-botton: 20px;
+}
+
+.maze-button {
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.maze-button.normal {
+  background-color: #0190fe;
+}
+
+.maze-button.bfs {
+  background-color: lightpink;
+}
+
+.maze-button.dfs {
+  background-color: mediumpurple
+}
+
+.maze {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Apply these styles to all elements that have the classname of "cell" */
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+/* Apply these styles to all elements that have the classname of "cell" and "wall" */
+.cell.wall {
+  background-color: black;
+}
+
+/* Apply these styles to all elements that have the classname of "cell" and "path" */
+.cell.path {
+  background-color: white;
+}
+
+/* Apply these styles to all elements that have the classname of "cell" and "start" */
+.cell.start {
+  background-color: green;
+}
+
+/* Apply these styles to all elements that have the classname of "cell" and "end" */
+.cell.end {
+  background-color: red;
+}
+
+.cell.visited_bfs {
+  background-color: lightpink;
+}
+
+.cell.visited_dfs {
+  background-color: mediumpurple;
+}
+
+.cell.solved {
+  background-color: lightgreen;
+}

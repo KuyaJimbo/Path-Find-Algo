@@ -29,3 +29,43 @@ BFS(graph, start):
             if neighbor is not in visited:
                 queue.enqueue(neighbor)
                 visited.add(neighbor)
+
+## Depth-First Search (DFS)
+
+### Characteristics:
+- Uses a stack (LIFO) data structure or recursion.
+- Can be implemented using either an explicit stack or recursion.
+- Suitable for topological sorting, solving puzzles, and checking connectivity.
+
+### Pseudocode (Iterative using Stack):
+```pseudo
+DFS(graph, start):
+    let stack = empty stack
+    let visited = empty set
+    
+    stack.push(start)
+    
+    while stack is not empty:
+        node = stack.pop()
+        
+        if node is not in visited:
+            process(node)  // Placeholder for any action to perform on the node
+            visited.add(node)
+            
+            for each neighbor in graph.adjacentNodes(node):
+                if neighbor is not in visited:
+                    stack.push(neighbor)
+
+### Pseudocode (Recursion):
+```pseudo
+DFS(graph, node, visited):
+    if node not in visited:
+        process(node)  // Placeholder for any action to perform on the node
+        visited.add(node)
+        
+        for each neighbor in graph.adjacentNodes(node):
+            DFS(graph, neighbor, visited)
+
+# Initialization call
+DFS(graph, start, empty set)
+

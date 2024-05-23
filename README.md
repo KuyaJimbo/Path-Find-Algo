@@ -29,6 +29,7 @@ BFS(graph, start):
             if neighbor is not in visited:
                 queue.enqueue(neighbor)
                 visited.add(neighbor)
+```
 
 ## Depth-First Search (DFS)
 
@@ -55,6 +56,7 @@ DFS(graph, start):
             for each neighbor in graph.adjacentNodes(node):
                 if neighbor is not in visited:
                     stack.push(neighbor)
+```
 
 ### Pseudocode (Recursion):
 ```pseudo
@@ -68,4 +70,4 @@ DFS(graph, node, visited):
 
 # Initialization call
 DFS(graph, start, empty set)
-
+```

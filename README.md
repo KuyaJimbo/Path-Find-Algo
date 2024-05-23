@@ -71,3 +71,8 @@ DFS(graph, node, visited):
 # Initialization call
 DFS(graph, start, empty set)
 ```
+
+## Comparison
+- *BFS*: Ensures the shortest path in an unweighted graph, uses more memory for wide graphs.
+- *DFS*: Memory efficient for deep but sparse graphs, does not guarantee the shortest path.
+Both algorithms are essential for applications in web crawling, network analysis, and solving various computational problems
